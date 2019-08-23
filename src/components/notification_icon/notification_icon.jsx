@@ -303,7 +303,6 @@ class NotificationIcon extends React.Component {
                                                     <button
 
                                                         className='close-notif-button'
-
                                                         onClick={(e) => this.clearBookmarkNotification(item.email, e)}
                                                     >
                                                         <Icon
