@@ -188,8 +188,10 @@ class NotificationIcon extends React.Component {
     handleClickOutside = event => {
         const domNode = ReactDOM.findDOMNode(this.refs.dropdown);
 
-        if (domNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.lastChild) {
-            if (!domNode.contains(event.target) && !domNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.lastChild.contains(event.target)) {
+        console.log(document.body)
+
+        if (document.body.lastChild) {
+            if (!domNode.contains(event.target) && !document.body.lastChild.contains(event.target)) {
                 this.setState({
                     visible: false
                 });
